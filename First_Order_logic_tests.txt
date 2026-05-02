@@ -1,0 +1,3 @@
+"~(forall x R(x)) -> (exists x ~R(x))"
+
+"(forall y (exists x R(x,y))) -> (exists x (forall y R(x,y)))"

@@ -1,0 +1,70 @@
+# Propositional logic tests with increasing complexity
+# (one formula per line)
+# All formulas are valid tautologies that should be provable
+
+# ============ SIMPLE TESTS (Should be instant) ============
+
+# Law of excluded middle
+p | ~p
+
+# Simple disjunction
+p | q
+
+# Simple implication
+p -> q
+
+# Conjunction
+p & q
+
+# Modus ponens
+(p -> q) & p -> q
+
+# Modus tollens
+(p -> q) & ~q -> ~p
+
+# De Morgan's laws
+~(p & q) -> (~p | ~q)
+
+# Negation elimination
+~~p -> p
+
+# Double negation
+p -> ~~p
+
+# Implication equivalence
+(p -> q) | (~p | q)
+
+# Excluded middle variations
+(p | ~p) | q
+
+# Transitivity
+(p -> q) & (q -> r) -> (p -> r)
+
+# Complex formula
+((p -> q) & (q -> r)) -> (p -> r)
+
+# Contradiction
+p & ~p
+
+# ============ MODERATE COMPLEXITY ============
+
+# Simple De Morgan variant
+~((p & q) | r) -> (~p | ~q | ~r)
+
+# Distribution of implication
+(p -> (q & r)) -> ((p -> q) & (p -> r))
+
+# Disjunction distribution
+(p & (q | r)) -> ((p & q) | (p & r))
+
+# ============ HIGHER COMPLEXITY ============
+
+# Complex but provable
+(p -> (q -> r)) -> ((p & q) -> r)
+
+
+# ============ COMPLEX PATTERNS ============
+
+# Triple negation
+~~~p -> ~p
+
